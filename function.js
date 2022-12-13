@@ -1,6 +1,6 @@
 function getInfo() {
     var http = new XMLHttpRequest();
-    http.open("GET", "http://askaf11.github.io/test/data.json", false);
+    http.open("GET", "https://askaf11.github.io/test/data.json", false);
     http.send();
 
     if (http.readyState == 4 && http.status == 200) {
