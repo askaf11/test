@@ -1,0 +1,39 @@
+{
+    "users": [
+        {
+            "username": "Person_1",
+            "age": 21,
+            "gender": "Male",
+            "mail": "example@outlook.in",
+            "phone": "1000010000"
+        },
+        {
+            "username": "Person_2",
+            "age": 22,
+            "gender": "Female",
+            "mail": "person@gmail.com",
+            "phone": "2000020000"
+        },
+        {
+            "username": "Person_3",
+            "age": 27,
+            "gender": "Male",
+            "mail": "example@outlook.in",
+            "phone": "3000030000"
+        },
+        {
+            "username": "Person_4",
+            "age": 25,
+            "gender": "Female",
+            "mail": "person@gmail.com",
+            "phone": "4000040000"
+        },
+        {
+            "username": "Person_5",
+            "age": 23,
+            "gender": "Male",
+            "mail": "person@gmail.com",
+            "phone": "5000050000"
+        }
+    ]
+}
