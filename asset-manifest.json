@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/static/css/main.867ab57f.css",
+    "main.js": "/static/js/main.db4659a2.js",
+    "static/media/w1.jpg": "/static/media/w1.fc47dbb158f238eacce5.jpg",
+    "static/media/DM-Banner.jpg": "/static/media/DM-Banner.07c9b73c4f90446fc0a3.jpg",
+    "static/media/w2.jpg": "/static/media/w2.6dbb693368da88fbda7d.jpg",
+    "static/media/w-a-logo.png": "/static/media/w-a-logo.00392b9cced57a7d886e.png",
+    "index.html": "/index.html",
+    "main.867ab57f.css.map": "/static/css/main.867ab57f.css.map",
+    "main.db4659a2.js.map": "/static/js/main.db4659a2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.867ab57f.css",
+    "static/js/main.db4659a2.js"
+  ]
+}
