@@ -1,0 +1,442 @@
+/* -------------------- Pc -------------------- */
+* {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    font-family: 'Quicksand', sans-serif;
+}
+
+body {
+    background-color: #836FFF !important;
+}
+
+/* ---------------------------------------- Font */
+.font-small {
+    font-weight: normal;
+    font-size: 1.5vw !important;
+}
+
+.font-small-special {
+    font-weight: 400;
+    font-size: 1.5vw;
+    color: #282A35;
+}
+
+.font-large {
+    font-weight: normal;
+    font-size: 2.5vw !important;
+}
+
+.font-xl {
+    font-weight: normal;
+    font-size: 5vw;
+}
+
+.icon-small {
+    font-size: 3vw;
+    color: #3508AA;
+}
+
+.icon-large {
+    font-size: 5vw;
+}
+
+.hero-text-span {
+    color: #3508AA;
+    font-size: 5vw;
+}
+
+.subhead {
+    margin: 10% 0% 2.5% 5%;
+    color: #fff;
+}
+@media screen and (max-width:576px) {
+    .icon-small {
+        font-size: 6vw;
+        color: #3508AA;
+    }
+    
+    .icon-large {
+        font-size: 10vw;
+    }
+
+    .hero-text-span {
+        color: #3508AA;
+        font-size: 10vw;
+    }
+    .subhead {
+        margin: 20% 0% 5% 5%;
+        color: #fff;
+    }
+}
+
+/* ---------------------------------------- NavBar */
+
+.navbar {
+    background-color: #f3f8ff !important;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.nav-item:hover {
+    background-color: lightgray !important;
+}
+
+.nav-link {
+    color: #282A35 !important;
+}
+
+/* ---------------------------------------- Hero Section */
+
+.sec-hero {
+    margin: 7.5% 5% 5% 5%;
+    padding: 2.5%;
+    border-radius: 25px;
+    background-color: #fff !important;
+
+}
+
+.hero-div-one {
+    width: 50%;
+}
+
+.hero-div-one div {
+    display: block;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+.hero-div-one h2 {
+    font-size: 3.5vw;
+    margin: 4% 0;
+}
+
+.hero-div-one h1 {
+    line-height: 1.5;
+    font-size: 1.5vw;
+    text-align: justify;
+}
+
+.hero-div-one button {
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #3508AA;
+    padding: 1% 2%;
+    margin: 4% 0;
+    font-size: 1.5vw;
+}
+
+/*** *** *** *** *** *** Div Two PC*/
+
+.hero-div-two {
+    width: 50%;
+    text-align: right;
+}
+
+.hero-div-two img {
+    width: 70%;
+    object-fit: cover;
+
+}
+
+@media screen and (max-width:576px) {
+
+    .sec-hero {
+        margin: 20% 5% 5% 5%;
+        padding: 5%;
+        border-radius: 25px;
+        background-color: #fff !important;
+
+    }
+
+    .hero-div-two {
+        width: 100%;
+        text-align: right;
+    }
+
+    .hero-div-two img {
+        width: 100%;
+        object-fit: cover;
+
+    }
+}
+
+/* ---------------------------------------- Services */
+.sec-services {
+    margin: 0% 5% 0% 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sec-services-div {
+    margin: 2.5% 0%;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 3%;
+    width: 45.5%;
+    display: flex;
+    justify-content: space-around;
+}
+
+@media screen and (max-width:576px) {
+
+    .sec-services-div {
+        margin: 5% 0%;
+        background-color: #fff;
+        border-radius: 10px;
+        padding: 5%;
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+    }
+}
+
+/* ---------------------------------------- Sec-works */
+.sec-works {
+    margin: 0% 5% 0% 5%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sec-works-img {
+    width: 30%;
+    margin: 2% 0% 2% 0%;
+    border-radius: 10px;
+
+}
+
+@media screen and (max-width:576px) {
+    .sec-works-img {
+        width: 48%;
+        margin: 1% 0% 1% 0%;
+        border-radius: 10px;
+    
+    }
+}
+
+/* ---------------------------------------- Sec-contact */
+.sec-contact {
+    margin: 10% 5%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: #fff;
+    padding: 2.5% 2.5%;
+    border-radius: 10px;
+}
+
+.sec-contact div {
+    width: 20%;
+    padding: auto 0;
+    margin: auto;
+    text-align: center;
+
+}
+
+.call-button {
+    width: 30% !important;
+}
+
+.sec-contact-btn-fill {
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #3508AA;
+    padding: 2.5% 5%;
+    margin: auto 2.5%;
+    font-size: 1.5vw;
+    text-align: center;
+}
+
+.sec-contact-btn-outline {
+    border: 1px solid #3508AA;
+    background-color: #fff;
+    border-radius: 5px;
+    color: #3508AA;
+    padding: 2.5% 5%;
+    margin: auto 2.5%;
+    font-size: 1.5vw;
+    text-align: center;
+}
+@media screen and (max-width:576px) {
+    .sec-contact {
+        margin: 20% 5%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        background-color: #fff;
+        padding: 2.5% 2.5%;
+        border-radius: 10px;
+    }
+    .sec-contact div {
+        width: 100%;
+        padding: auto 0;
+        margin: 5% auto;
+        text-align: center;
+    
+    }
+    .call-button {
+        width: 100% !important;
+    }
+    
+}
+
+footer {
+    background-color: #f3f8ff;
+    /* background-color: #86A7FC; */
+    padding: 2% 0;
+}
+
+.footer-div {
+    margin: 5% 1%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.footer-icon-div {
+    width: 15%;
+    margin: auto 0;
+    text-align: center;
+}
+
+.footer-img-div {
+    width: 15%;
+}
+
+.footer-icon {
+    background-color: #545454;
+    padding: 2% 4.5%;
+    border-radius: 10%;
+    font-size: 2.5vw;
+    margin: auto 5%;
+    color: #fff;
+
+}
+
+.footer-link-div {
+    width: 50%;
+    text-align: center;
+}
+
+.footer-link-div a {
+    text-decoration: none;
+    margin: auto 5%;
+    color: #545454;
+}
+@media screen and (max-width:576px) {
+    .footer-div {
+        margin: 5% 1%;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-between;
+    
+    }
+    .footer-icon-div {
+        width: 100%;
+        margin: 5% 0;
+        text-align: center;
+    }
+    .footer-icon {
+        background-color: #545454;
+        padding: 2% 3%;
+        border-radius: 10%;
+        font-size: 6vw;
+        margin: auto 2.5%;
+        color: #fff;
+    
+    }
+    .footer-link-div {
+        width: 100%;
+        margin: 5% 0;
+        text-align: center;
+    }
+    .footer-img-div {
+        width: 100%;
+        margin: 5% auto;
+        text-align: center;
+    }
+    
+}
+
+/*** *** *** *** *** *** Div One Mobile*/
+@media screen and (max-width:576px) {
+    .sec-hero {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 5% 5% 10% 5%;
+    }
+
+    .hero-div-one {
+        width: 100% !important;
+    }
+
+    .hero-div-one h2 {
+        font-size: 10vw;
+        margin: 10% 0;
+    }
+
+    .hero-div-one h1 {
+        line-height: 1.5;
+        font-size: 5vw;
+    }
+
+    .hero-div-one button {
+        border: none;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #3508AA;
+        padding: 1% 4%;
+        margin: 4% auto;
+        font-size: 6vw;
+    }
+
+    /*** *** *** *** *** *** Div Two Mobile*/
+    .hero-div-two {
+        width: 100% !important;
+    }
+
+    .hero-div-two div {
+        margin: 0 auto;
+        width: 75%;
+    }
+}
+
+/* -------------------- Mobile -------------------- */
+/* ---------------------------------------- Fonts */
+@media screen and (max-width:576px) {
+    .font-xl {
+        font-size: 9vw !important;
+    }
+
+    .font-large {
+        font-size: 7vw !important;
+    }
+
+    .font-small {
+        font-size: 5vw !important;
+    }
+
+    .font-small-special {
+        font-size: 4vw;
+    }
+
+    /* ---------------------------------------- NavBar */
+    .nav-item {
+        margin: 1.5vh 0vh;
+    }
+
+    .navbar-toggler {
+        border: none !important;
+    }
+
+    .active {
+        border-bottom: unset;
+    }
+}
