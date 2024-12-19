@@ -1,0 +1,183 @@
+@font-face {
+    font-family: 'poppins';
+    src: url('../fonts/Poppins-Regular.ttf') format('truetype');
+}
+
+body {
+    font-family: 'poppins', sans-serif !important;
+}
+
+h2{
+    font-size: 2.5vw !important;
+    color: #545454 !important;
+}
+
+@media screen and (max-width: 768px) {
+    h2{
+        font-size: 5.5vw !important;
+    }
+}
+
+
+/* Desktop view */
+.sec-circle {
+    margin: 10% 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.circle-div {
+    text-align: center;
+    margin: 0 10px;
+}
+
+.circle {
+    border: 2px solid #EEEEEE;
+    border-radius: 50%;
+    width: 10vw;
+    height: 10vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.circle-img {
+    width: 5vw;
+    height: 5vw;
+}
+
+.circle-text {
+    font-size: 1.25vw;
+    margin-top: 1vw;
+}
+
+/* Mobile view */
+@media screen and (max-width: 768px) {
+    .sec-circle {
+        margin: 20% 5%;
+        display: flex;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 15px;
+    }
+
+    .circle-div {
+        scroll-snap-align: center;
+    }
+
+    .circle {
+        width: 25vw;
+        height: 25vw;
+    }
+
+    .circle-img {
+        width: 18vw;
+        height: 18vw;
+    }
+
+    .circle-text {
+        font-size: 4vw;
+        margin-top: 3vw;
+    }
+}
+
+/* Contact */
+
+.sec-contact {
+    margin: 10% 5%;
+    background-color: #EEEEEE;
+    border-radius: 10px;
+    padding: 2.5%;
+}
+
+.contact-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.contact-card {
+    background-color: #545454;
+    border-radius: 10px;
+    padding: 2% 5%;
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact-card div {
+    padding: 5% 0;
+
+}
+
+.contact-card i {
+    color: white;
+}
+
+.contact-card a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2vw;
+}
+
+.map-card {
+    width: 40%;
+}
+
+.map-card iframe{
+    border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+    .sec-contact {
+        padding: 5%;
+    }
+    .contact-flex {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    .contact-card {
+        padding: 2% 5%;
+        width: 100%;
+    }
+
+    .contact-card a {
+        font-size: 3.5vw;
+    }
+
+    .map-card {
+        width: 100%;
+        margin: 5% 0 0 0;
+    }
+}
+
+.call-icon {
+    position: fixed; /* Fixed positioning */
+    bottom: 20px;    /* Distance from the bottom */
+    right: 20px;     /* Distance from the right */
+    width: 60px;     /* Width of the icon */
+    height: 60px;    /* Height of the icon */
+    z-index: 1000;   /* Ensure it appears above other elements */
+    border-radius: 50%; /* Make it circular */
+    background-color: #545454; /* Background color */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for a 3D effect */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.call-icon i{
+    font-size: 25px;
+    color: #25D366;
+}
+
+.call-icon:hover {
+    background-color: #545454; /* Darker shade on hover */
+}
