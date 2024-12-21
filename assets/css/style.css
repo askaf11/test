@@ -22,7 +22,7 @@ body {
 .font-small{
     font-size: 1.25vw !important;
     color: #343434 !important;
-    font-weight: 550 !important;
+    font-weight: 500 !important;
 }
 
 .navbar-toggler:focus {
@@ -96,6 +96,7 @@ body {
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .circle-img {
@@ -161,6 +162,7 @@ body {
 
 .card-div {
     width: 22.5%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .card-body {
