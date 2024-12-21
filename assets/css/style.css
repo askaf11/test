@@ -87,7 +87,8 @@ body {
 
 .circle {
     /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
-    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+/*     background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%); */
+    background-color: #F5F5F5;
     border-radius: 10px;
     width: 10vw;
     height: 10vw;
@@ -162,7 +163,7 @@ body {
 
 .card-div {
     width: 22.5%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+/*     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .card-body {
