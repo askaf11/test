@@ -8,7 +8,7 @@ body {
     background-color: #FFFFFF !important;
 }
 
-.bg-2{
+.bg-2 {
     background-color: #F5F5F5;
 }
 
@@ -19,7 +19,7 @@ body {
     margin: 0 !important;
 }
 
-.font-small{
+.font-small {
     font-size: 1.25vw !important;
     color: #343434 !important;
     font-weight: 500 !important;
@@ -35,7 +35,7 @@ body {
         color: #343434;
     }
 
-    .font-small{
+    .font-small {
         font-size: 3.5vw !important;
     }
 
@@ -122,6 +122,7 @@ body {
 
     .circle-div {
         scroll-snap-align: center;
+        margin: 0 2%;
     }
 
     .circle {
@@ -159,10 +160,12 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .card-div {
     width: 22.5%;
+    margin-top: 2.5% ;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
@@ -170,7 +173,7 @@ body {
     padding: 5% !important;
 }
 
-.card-body h5{
+.card-body h5 {
     margin: 0 !important;
 }
 
@@ -203,7 +206,7 @@ body {
 /* Services */
 /* Desktop view */
 
-.sec-bg{
+.sec-bg {
     /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
     background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
     margin: 10% 5%;
@@ -216,11 +219,11 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
- 
+
     border-radius: 10px;
 }
 
-.services-head{
+.services-head {
     padding: 0% 0% 2.5% 0%;
     text-align: center;
 }
@@ -252,16 +255,16 @@ body {
 /* Mobile view */
 @media screen and (max-width: 768px) {
 
-    .sec-bg{
+    .sec-bg {
         margin: 10% 5%;
         padding: 10% 0%;
         border-radius: 10px;
     }
 
-    .services-head{
+    .services-head {
         text-align: center;
     }
-    
+
     .sec-services {
         /* margin: 10% 5% 10% 5%; */
         display: flex;
