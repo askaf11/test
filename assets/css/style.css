@@ -8,6 +8,10 @@ body {
     background-color: #FFFFFF !important;
 }
 
+a {
+    text-decoration: none !important;
+}
+
 .bg-2 {
     background-color: #F5F5F5;
 }
@@ -43,6 +47,32 @@ body {
         padding: 5% 0% !important;
     }
 }
+
+
+/* Breadcrumb */
+.bcb-sec {
+    margin: 5% 5% 0% 5%;
+}
+
+.bcb-sec a {
+    color: #333 !important;
+    text-decoration: underline !important;
+}
+
+/* Breadcrumb Mobile */
+@media screen and (max-width:576px) {
+
+    .bcb-sec {
+        margin: 15% 5% 0% 5%;
+    }
+}
+
+/* @media screen and (max-width:576px) {
+.modal{
+    margin: 0 10% !important;
+}
+} */
+
 
 /* Hero Banner */
 .hero-banner {
@@ -165,7 +195,7 @@ body {
 
 .card-div {
     width: 22.5%;
-    margin-top: 2.5% ;
+    margin-top: 2.5%;
     /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
@@ -402,7 +432,48 @@ body {
     color: #25D366;
 }
 
+
 .call-icon:hover {
     background-color: #343434;
     /* Darker shade on hover */
+}
+
+.btn-success {
+    --bs-btn-bg: #25D366 !important;
+    --bs-btn-border-color: #25D366 !important;
+}
+
+footer{
+    padding: 5% 0% 0% 0%;
+}
+
+.footer-icon-div {
+    width: 25%;
+    margin: 0 auto 2.5% auto;
+    text-align: center;
+
+}
+
+.footer-icon {
+    padding: 3.5%;
+    border-radius: 10px;
+    font-size: 2vw;
+    margin: auto 5%;
+    color: #F5F5F5;
+    background-color: #343434;
+
+}
+
+@media screen and (max-width:576px) {
+    .footer-icon-div {
+        width: 100%;
+        margin: 5% 0;
+        text-align: center;
+    }
+
+    .footer-icon {
+        font-size: 6vw;
+        margin: auto 2.5%;
+
+    }
 }
