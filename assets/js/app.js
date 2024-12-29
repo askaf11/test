@@ -1,43 +1,58 @@
-document.getElementById('NavBar').innerHTML = `
-<nav class="navbar navbar-expand-sm bg-2 navbar-light fixed-top">
-        <div class="container-fluid d-flex justify-content-between">
-            <a href="/">
-                <img src="https://nsdcomputers.com/assets/img/logo_2.png" class="nav-logo"
-                    style="width:55px; border-radius: 5px; object-fit: cover;" alt="NSD Logo"></a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar"
-                aria-label="Nav bar toggle button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
-                <ul class="navbar-nav text-center">
-                    <li class="nav-item px-3 font-small">
-                        <a class="nav-link" href="/desktop">Desktop</a>
-                    </li>
-                    <li class="nav-item px-3 font-small">
-                        <a class="nav-link" href="/laptop">Laptop</a>
-                    </li>
-                    <li class="nav-item px-3 font-small">
-                        <a class="nav-link" href="/mobile">Mobile</a>
-                    </li>
-                    <li class="nav-item px-3 font-small">
-                        <a class="nav-link" href="/accessories">Accessories</a>
-                    </li>
-                    <li class="nav-item px-3 font-small">
-                        <a class="nav-link" href="/home-appliances">Home Appliances</a>
-                    </li>
-                    <li class="nav-item px-3 font-small">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item px-3 font-small">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-`;
 
-// breadcrumb.js
+document.getElementById('NavBar').innerHTML = `<nav class="navbar navbar-expand-sm custom-background navbar-light fixed-top">
+    <div class="container-fluid d-flex justify-content-between">
+        <a href="/">
+            <img src="https://nsdcomputers.com/assets/img/logo_2.png" class="nav-logo"
+                style="width:55px; border-radius: 5px; object-fit: cover;" alt="NSD Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar"
+            aria-label="Nav bar toggle button">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
+            <ul class="navbar-nav text-center">
+                <li class="nav-item dropdown px-3 font-small">
+                    <a class="nav-link dropdown-toggle" href="/popular-products" id="accessoriesDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Devices
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="accessoriesDropdown">
+                        <li><a class="dropdown-item" href="/desktop">Desktop</a></li>
+                        <li><a class="dropdown-item" href="/laptop">Laptop</a></li>
+                        <li><a class="dropdown-item" href="/mobile">Mobile</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item px-3 font-small">
+                    <a class="nav-link" href="/laptop">Laptop</a>
+                </li>
+                <li class="nav-item px-3 font-small">
+                    <a class="nav-link" href="/mobile">Mobile</a>
+                </li>
+                <li class="nav-item dropdown px-3 font-small">
+                    <a class="nav-link dropdown-toggle" href="#" id="accessoriesDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Accessories
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="accessoriesDropdown">
+                        <li><a class="dropdown-item" href="/accessories/keyboards">Keyboards</a></li>
+                        <li><a class="dropdown-item" href="/accessories/mice">Mice</a></li>
+                        <li><a class="dropdown-item" href="/accessories/headphones">Headphones</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item px-3 font-small">
+                    <a class="nav-link" href="/home-appliances">Home Appliances</a>
+                </li>
+                <li class="nav-item px-3 font-small">
+                    <a class="nav-link" href="#services">Services</a>
+                </li>
+                <li class="nav-item px-3 font-small">
+                    <a class="nav-link" href="#contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+`;
 
 // Function to initialize the breadcrumb
 function initializeBreadcrumb() {
@@ -173,7 +188,7 @@ document.getElementById('WhatsApp').innerHTML = `
 `;
 
 document.getElementById('Footer').innerHTML = `
-<footer class="bg-2">
+<footer class="custom-background">
         <div class="footer-icon-div">
             <span class="footer-icon-span"><a href="#" target="_blank">
                     <i class="bi bi-facebook footer-icon"></i></a>
@@ -182,12 +197,21 @@ document.getElementById('Footer').innerHTML = `
                     <i class="bi bi-instagram footer-icon"></i></a>
             </span>
         </div>
-        <div class="text-center p-3">
-            <span class="font-small">Images by <a href="https://www.freepik.com" target="_blank">Freepik</a> and <a
-                    href="https://www.vecteezy.com" target="_blank">Vecteezy</a>.</span><br>
-            <a href="https://askaf.in/" class="font-small text-decoration-none">Design by Askaf</a><br>
-            <a href="/" class="font-small text-decoration-none"><i class="bi bi-c-category"></i> 2024 NSD
-                Computers & Electronics. All rights reserved.</a>
-        </div>
+       <div class="footer-credits text-center p-3">
+    <span class="font-small">
+        Images by: 
+        <a href="https://www.freepik.com" target="_blank">Freepik</a> and 
+        <a href="https://www.vecteezy.com" target="_blank">Vecteezy</a>
+    </span>
+    <div class="my-2"></div> <!-- Vertical gap -->
+    <span class="font-small">
+        Design by <a href="https://askaf.in/" class="text-decoration-none">Askaf</a>
+    </span>
+    <div class="my-2"></div> <!-- Vertical gap -->
+    <span class="font-small">
+        <i class="bi bi-c-circle"></i> 2025 NSD Computers & Electronics. All rights reserved.
+    </span>
+</div>
+
 </footer>
 `;

@@ -1,3 +1,6 @@
+/***********************************************************
+Common Styles
+***********************************************************/
 @font-face {
     font-family: 'poppins';
     src: url('../fonts/Poppins-Regular.ttf') format('truetype');
@@ -12,7 +15,7 @@ a {
     text-decoration: none !important;
 }
 
-.bg-2 {
+.custom-background {
     background-color: #F5F5F5;
 }
 
@@ -29,15 +32,6 @@ a {
     font-weight: 500 !important;
 }
 
-.navbar-toggler:focus {
-    box-shadow: none !important;
-}
-
-.btn-success {
-    --bs-btn-bg: #25D366 !important;
-    --bs-btn-border-color: #25D366 !important;
-}
-
 @media screen and (max-width: 768px) {
     .font-large {
         font-size: 5vw !important;
@@ -47,41 +41,85 @@ a {
     .font-small {
         font-size: 3.5vw !important;
     }
+}
 
+/***********************************************************
+Bootstrap Overwrite
+***********************************************************/
+
+.navbar-toggler:focus {
+    box-shadow: none !important;
+}
+
+.btn-success {
+    --bs-btn-bg: #25D366 !important;
+    --bs-btn-border-color: #25D366 !important;
+}
+
+/* Nav link hover effect */
+.nav-item .nav-link {
+    transition: color 0.3s, background-color 0.3s; /* Smooth transition */
+}
+
+.nav-item:hover  {
+    background-color: #343434; /* Change background color on hover */
+    border-radius: 5px; /* Optional: Add rounded corners */
+}
+
+.nav-item:hover .nav-link{
+    color: #F5F5F5;
+}
+
+/* Optional: Change cursor on hover */
+.nav-item .nav-link:hover {
+    cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+.navbar-nav .dropdown:hover .dropdown-menu {
+    display: block;
+    margin-top: 0;
+    /* Adjust if needed to align dropdown */
+}
+
+
+@media screen and (max-width: 768px) {
     .nav-link {
         padding: 5% 0% !important;
     }
 }
 
+/***********************************************************
+Breadcrumb
+***********************************************************/
 
-/*********************************************************** Breadcrumb */
-.bcb-sec {
+.breadcrumb-section {
     margin: 5% 5% 0% 5%;
 }
 
-.bcb-sec a {
+.breadcrumb-section a {
     color: #333 !important;
     text-decoration: underline !important;
-    
+
 }
 
-.bcb-sec li{
+.breadcrumb-section li {
     font-size: 1.25vw !important;
 }
 
 @media screen and (max-width:768px) {
 
-    .bcb-sec {
+    .breadcrumb-section {
         margin: 15% 5% 0% 5%;
     }
 
-    .bcb-sec li {
+    .breadcrumb-section li {
         font-size: 3.5vw !important;
     }
 }
 
-
-/*********************************************************** Hero Banner */
+/***********************************************************
+Hero Banner 
+***********************************************************/
 .hero-banner {
     margin: 7.5% 5% 10% 5%;
 }
@@ -94,9 +132,9 @@ a {
     width: 100%;
     height: 35vw;
     object-fit: cover;
-    /* Crops the image on desktop */
 }
 
+/* Responsive Styles for Smaller Screens */
 @media screen and (max-width: 768px) {
     .hero-banner {
         margin: 20% 5% 10% 5%;
@@ -104,12 +142,13 @@ a {
 
     .carousel-item img {
         object-fit: contain;
-        /* Shows the full image on mobile */
         height: auto;
     }
 }
 
-/*********************************************************** Catergory Icon */
+/***********************************************************
+Category Icon 
+***********************************************************/
 .sec-category {
     margin: 10% 5%;
     display: flex;
@@ -139,11 +178,21 @@ a {
     height: 5vw;
 }
 
+/* Image hover effect */
+.category-div .category-img {
+    transition: transform 0.3s, filter 0.3s; /* Smooth transitions for the image */
+}
+
+.category-div:hover .category-img {
+    transform: scale(1.1); /* Slightly zoom the image */
+    filter: brightness(0.9); /* Darken the image slightly */
+}
+
 .category-text {
     margin-top: 1vw;
 }
 
-/* Mobile view */
+/* Mobile View */
 @media screen and (max-width: 768px) {
     .sec-category {
         margin: 20% 5%;
@@ -175,7 +224,10 @@ a {
     }
 }
 
-/*********************************************************** Product */
+/***********************************************************
+Product Section
+***********************************************************/
+
 .product-head {
     margin: 10% 5% 2.5% 5%;
     display: flex;
@@ -211,6 +263,18 @@ a {
     margin: 0 !important;
 }
 
+/* Card hover effect */
+.card-div .card {
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s; /* Smooth transitions */
+}
+
+.card-div .card:hover {
+    transform: scale(1.05); /* Slightly enlarge the card */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    background-color: #f8f9fa; /* Change background color */
+    border-radius: 8px; /* Optional: Add rounded corners on hover */
+}
+
 @media screen and (max-width: 768px) {
 
     .product-head {
@@ -226,7 +290,7 @@ a {
         /* overflow-x: auto;
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-         */ 
+         */
         flex-wrap: wrap;
         gap: 5%;
     }
@@ -238,8 +302,68 @@ a {
 
 }
 
-/*********************************************************** Services */
+/***********************************************************
+Link card
+***********************************************************/
 
+.links-container {
+    display: flex;
+    flex-wrap: wrap;
+    /* Allows items to wrap to the next line */
+    gap: 2.5%;
+    /* Space between links */
+    justify-content: center;
+    /* Centers the links */
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+    margin: 10% 5%;
+    padding: 5%;
+    border-radius: 10px;
+}
+
+.links-container a {
+    margin-top: 2.5%;
+    display: flex;
+    align-items: center;
+    /* Aligns icon and text */
+    gap: 8px;
+    /* Space between icon and text */
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+    text-decoration: none;
+    color: #333;
+    font-size: 1.25vw;
+    transition: background-color 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.links-container a:hover {
+    background-color: #343434;
+    color: #fff;
+}
+
+.links-container a i.icon {
+    font-size: 16px;
+    /* Icon size */
+}
+
+@media screen and (max-width: 768px) {
+
+    .links-container {
+        gap: 5%;
+        /* Space between links */
+    }
+
+    .links-container a {
+        margin-top: 5%;
+        font-size: 3.5vw;
+    }
+}
+
+
+/***********************************************************
+Services Section
+***********************************************************/
 .sec-bg {
     /* background-image: linear-gradient(to top, #accbee 0%, #e7f0fd 100%); */
     background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
@@ -253,24 +377,19 @@ a {
     text-align: center;
 }
 
-.services-icon {
-    font-size: 5vw;
-}
-
-/* Common styles */
 .sec-services {
-    overflow: hidden;
+    overflow: hidden; /* Keep overflow hidden for desktop */
     position: relative;
-    padding: 5% 0;
+    width: 90%;
+    margin: 0 auto;
 }
 
 .services-wrapper {
     display: flex;
-    flex-wrap: nowrap;
-    gap: 50px;
-    transition: transform 0.5s ease;
-    justify-content: space-around;
-    margin: 0 10%;
+    flex-wrap: wrap;
+    gap: 3.33%;
+    justify-content: start;
+    margin: auto 5%;
 }
 
 .services-div {
@@ -278,36 +397,35 @@ a {
     text-align: center;
     width: 22.5%;
     scroll-snap-align: start;
+    margin-top: 3.33%;
 }
 
 .services-card {
-    padding: 10%;
+    padding: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    overflow: hidden;
-    /* background-color: #f9f9f9; */
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .services-icon {
-    font-size: 5vw;
+    font-size: 3vw;
 }
 
 .services-text {
     margin-top: 1vw;
+    font-size: 1.25vw;
 }
 
-.services-para{
+.services-para {
     margin: 0% auto;
     text-align: justify;
     width: 70%;
     line-height: 2;
 }
 
-.services-para p{
+.services-para p {
     margin: 0 !important;
     opacity: 0.8;
 }
@@ -315,26 +433,21 @@ a {
 
 /* Mobile View: Horizontal Scrolling */
 @media screen and (max-width: 768px) {
-
-    .sec-bg {
-        margin: 10% 5%;
-        padding: 10% 0%;
-        border-radius: 10px;
-    }
-    
     .sec-services {
-        overflow-x: auto;
+        overflow-x: auto; /* Enable horizontal scrolling on mobile */
         scroll-snap-type: x mandatory;
         -webkit-overflow-scrolling: touch;
-        margin: auto 5%;
+        margin: auto 0;
     }
 
     .services-wrapper {
-        gap: 10%;
+        flex-wrap: nowrap;
+        gap: 5%;
+        transition: transform 0.5s ease;
     }
 
     .services-div {
-        width: 50%;
+        width: 40%; /* Adjust width for mobile */
     }
 
     .services-card {
@@ -342,51 +455,27 @@ a {
     }
 
     .services-icon {
-        font-size: 10vw;
+        font-size: 8vw;
     }
 
     .services-text {
         margin-top: 3vw;
+        font-size: 2.5vw;
     }
 
-    .services-para{
+    .services-para {
         margin: 5% 5% 5% 5%;
         text-align: justify;
         width: 90%;
     }
 
-    .carousel-btn {
-        display: none;
-    }
-}
-
-/* Navigation Buttons */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    padding: 1% 1.5%;
-    cursor: pointer;
-    z-index: 10;
-    border-radius: 10%;
-    opacity: 0.8;
-}
-
-.next-btn {
-    right: 10px;
-    font-size: 2vw;
-}
-
-.prev-btn {
-    left: 10px;
-    font-size: 2vw;
 }
 
 
-/*********************************************************** Contact */
+
+/***********************************************************
+Contact & Map Section
+***********************************************************/
 
 .sec-contact {
     margin: 10% 5%;
@@ -461,7 +550,11 @@ a {
         margin: 10% 0 0 0;
     }
 }
-/*********************************************************** Whatsapp Button */
+
+/***********************************************************
+Whatsapp button 
+***********************************************************/
+
 .call-icon {
     position: fixed;
     /* Fixed positioning */
@@ -499,7 +592,9 @@ a {
     /* Darker shade on hover */
 }
 
-/*********************************************************** Footer */
+/***********************************************************
+Footer Section
+***********************************************************/
 
 footer {
     padding: 5% 0% 0% 0%;
@@ -514,7 +609,7 @@ footer {
 
 .footer-icon {
     padding: 3.5%;
-    border-radius: 10px;
+    border-radius: 5px;
     font-size: 2vw;
     margin: auto 5%;
     color: #F5F5F5;

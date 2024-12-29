@@ -2,24 +2,25 @@
 <html lang="en">
 
 <head>
-    <!-- Meta Tags -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NSD Computers & Electronics</title>
-    <link rel="icon" href="#" type="image/gif" sizes="32x32">
-    <meta name="description" content="">
-    <meta name="author" content="Askaf">
-    <meta name="robots" content="index, follow">
-    <link rel="canonical" href="">
-    <!-- OG Tags -->
-    <meta property="og:title" content="#">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="#">
-    <meta property="og:image" content="#">
-    <meta property="og:description" content="#">
-    <meta property="og:locale" content="en_US">
-    <meta property="og:site_name" content="#">
-    <meta property="og:image:alt" content="#">
+   <!-- Meta Tags -->
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>NSD Computers & Electronics</title>
+   <link rel="icon" href="../assets/img/logo.png" type="image/gif" sizes="32x32">
+   <meta name="description"
+       content="NSD Computers & Electronics: Shop custom PCs, laptops, mobiles, and accessories. Explore gadgets, electronics, and expert tech services all in one place.">
+   <meta name="author" content="NSD Computers & Electronics">
+   <meta name="robots" content="index, follow">
+   <!-- <link rel="canonical" href="#"> -->
+   <!-- OG Tags -->
+   <meta property="og:title" content="NSD Computers & Electronics - Custom PCs, Laptops, Gadgets & Services">
+   <meta property="og:description"
+       content="Explore custom PCs, laptops, mobiles, accessories, and electronics. Get the best gadgets and expert tech services in one place.">
+   <meta property="og:image" content="https://nsdcomputers.com/assets/img/hero_banner_1.png">
+   <!-- <meta property="og:url" content="https://nsdcomputers.com/"> -->
+   <meta property="og:type" content="website">
+   <meta property="og:site_name" content="NSD Computers & Electronics">
+   <meta property="og:locale" content="en_US">
     <!-- Google Tag Manager -->
     <!-- End Google Tag Manager -->
     <!-- CSS -->
@@ -34,7 +35,7 @@
     <!-- NavBar -->
     <div id="NavBar"></div>
     <!-- Breadcrumb -->
-    <nav id="breadcrumb" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="bcb-sec"><ol class="breadcrumb"></ol></nav>
+    <nav id="breadcrumb" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="breadcrumb-section"><ol class="breadcrumb"></ol></nav>
     <!-- Product List -->
     <script src="../assets/js/product.js"></script>
     <!-- Product Section 1 -->
@@ -42,20 +43,21 @@
     <div id="product-container-1" class="product"></div>
     <script>
         const productsSection1 = [
-            {  placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/pc.png", alt: "Image", title: "Desktop" },
+            {  link: "/desktop", placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/pc.png", alt: "Image", title: "Desktop" },
             {  placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/laptop.png", alt: "Image", title: "Laptop" },
             {  placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/tablet.png", alt: "Image", title: "Tablet" },
             {  placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/smartphone.png", alt: "Image", title: "Smartphone" },
             {  placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/ps5.png", alt: "Image", title: "Play Station 5" },
             {  placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/printer.png", alt: "Image", title: "Printer" },
+            {  placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/projector.png", alt: "Image", title: "projector" },
             {  placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/drone.png", alt: "Image", title: "Drone" },
             {  placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/ups.png", alt: "Image", title: "UPS" },
             {  placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/landline.png", alt: "Image", title: "Landline Telephone" },
             {  placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/c_telephone.png", alt: "Image", title: "Cordless Telephone" },
-            {  placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/moniter.png", alt: "Image", title: "Monitor" },
-            {  placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/keyboard.png", alt: "Image", title: "Keyboard" },
-            {  placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/cabinet.png", alt: "Image", title: "Cabinet" },
-            {  placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/mouse.png", alt: "Image", title: "Mouse" }
+            {  link: "/desktop", placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/moniter.png", alt: "Image", title: "Monitor" },
+            {  link: "/desktop", placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/keyboard.png", alt: "Image", title: "Keyboard" },
+            {  link: "/desktop", placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/cabinet.png", alt: "Image", title: "Cabinet" },
+            {  link: "/desktop", placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/mouse.png", alt: "Image", title: "Mouse" }
         ];
         // Render products in both sections
         renderProducts("product-container-1", productsSection1);
@@ -63,7 +65,7 @@
     <!-- Modal -->
     <div id="Modal"></div>
     <!-- Contact & Map -->
-    <div id="contact" class="sec-contact bg-2"></div>
+    <div id="contact" class="sec-contact"></div>
     <!-- Whatsapp -->
     <div id="WhatsApp"></div>
     <!-- Footer -->
