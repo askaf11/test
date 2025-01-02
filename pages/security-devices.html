@@ -42,26 +42,29 @@
     <script src="../assets/js/product.js"></script>
     <!-- Product Section 1 -->
     <div class="product-head">
-        <h2 class="font-large">Mobile</h2>
+        <h2 class="font-large">Security Devices</h2>
     </div>
     <div id="product-container-1" class="product"></div>
     <!-- Product Section 2 -->
-    <!-- <div class="product-head" id="adapters&converters">
-        <h2 class="font-large">Laptop Components</h2>
+    <div class="product-head" id="batteries">
+        <h2 class="font-large">Batteries</h2>
     </div>
-    <div id="product-container-2" class="product"></div> -->
+    <div id="product-container-2" class="product"></div>
     <script>
         const productsSection1 = [
-
-            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/smartphone.png", alt: "Image", title: "Smartphone" },
-            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/tablet.png", alt: "Image", title: "Tablet" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/security/cctv.png", alt: "CCTV Camera", title: "CCTV Camera" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/security/dvr.png", alt: "DVR", title: "DVR" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/security/nvr.png", alt: "NVR", title: "NVR" },
         ];
-        // const productsSection2 = [
-
-        // ];
+        const productsSection2 = [
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/security/AAA-battery.png", alt: "AAA Battery", title: "AAA Battery" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/security/AA-battery.png", alt: "AA Battery", title: "AA Battery" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/security/9v-battery.png", alt: "9V Battery", title: "9V Battery" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "Thermal Pads", title: "Thermal Pads" },
+        ];
         // Render products in both sections
         renderProducts("product-container-1", productsSection1);
-        // renderProducts("product-container-2", productsSection2);
+        renderProducts("product-container-2", productsSection2);
     </script>
     <!-- Modal -->
     <div id="Modal"></div>

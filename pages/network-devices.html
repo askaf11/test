@@ -42,26 +42,35 @@
     <script src="../assets/js/product.js"></script>
     <!-- Product Section 1 -->
     <div class="product-head">
-        <h2 class="font-large">Mobile</h2>
+        <h2 class="font-large">Network Devices</h2>
+    </div>
+    <div id="product-container-2" class="product"></div>
+    <!-- Product Section 2 -->
+    <div class="product-head" id="converters">
+        <h2 class="font-large">Adapters & Converters</h2>
     </div>
     <div id="product-container-1" class="product"></div>
-    <!-- Product Section 2 -->
-    <!-- <div class="product-head" id="adapters&converters">
-        <h2 class="font-large">Laptop Components</h2>
-    </div>
-    <div id="product-container-2" class="product"></div> -->
     <script>
         const productsSection1 = [
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "HDMI Splitters", title: "HDMI Splitters" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "HDMI Joiner", title: "HDMI Joiner" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "USB Sound Card", title: "USB Sound Card" }
 
-            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/smartphone.png", alt: "Image", title: "Smartphone" },
-            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/tablet.png", alt: "Image", title: "Tablet" },
         ];
-        // const productsSection2 = [
+        const productsSection2 = [
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "WiFi Receiver", title: "WiFi Receiver" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "WiFi Routers", title: "WiFi Routers" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "WiFi Repeaters", title: "WiFi Repeaters" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "Network Switch", title: "Network Switch" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "LAN Cable (Cat 6, Cat 8)", title: "LAN Cable (Cat 6, Cat 8)" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "RJ45 Splitter", title: "RJ45 Splitter" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "4G Dongle (SIM-based)", title: "4G Dongle (SIM-based)" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "DVR WiFi Receiver", title: "DVR WiFi Receiver" }
 
-        // ];
+        ];
         // Render products in both sections
         renderProducts("product-container-1", productsSection1);
-        // renderProducts("product-container-2", productsSection2);
+        renderProducts("product-container-2", productsSection2);
     </script>
     <!-- Modal -->
     <div id="Modal"></div>

@@ -42,26 +42,35 @@
     <script src="../assets/js/product.js"></script>
     <!-- Product Section 1 -->
     <div class="product-head">
-        <h2 class="font-large">Mobile</h2>
+        <h2 class="font-large">Tools</h2>
     </div>
     <div id="product-container-1" class="product"></div>
     <!-- Product Section 2 -->
-    <!-- <div class="product-head" id="adapters&converters">
-        <h2 class="font-large">Laptop Components</h2>
+    <div class="product-head" id="connecter&ports">
+        <h2 class="font-large">Connectors & Ports</h2>
     </div>
-    <div id="product-container-2" class="product"></div> -->
+    <div id="product-container-2" class="product"></div>
     <script>
         const productsSection1 = [
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "Crimping Tool", title: "Crimping Tool" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "Punching Tool", title: "Punching Tool" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "Telephone Splitter", title: "Telephone Splitter" },
 
-            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/smartphone.png", alt: "Image", title: "Smartphone" },
-            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/tablet.png", alt: "Image", title: "Tablet" },
         ];
-        // const productsSection2 = [
+        const productsSection2 = [
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/tools/bnc-connector.png", alt: "BNC Connector", title: "BNC Connector" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "RJ11 Jack", title: "RJ11 Jack" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "RJ45 Jack", title: "RJ45 Jack" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "IO Port", title: "IO Port" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "DC Connector", title: "DC Connector" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "Balloon Connector", title: "Balloon Connector" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "PCI LAN Card", title: "PCI LAN Card" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "Network Rack (2U/4U/6U)", title: "Network Rack (2U/4U/6U)" },
 
-        // ];
+        ];
         // Render products in both sections
         renderProducts("product-container-1", productsSection1);
-        // renderProducts("product-container-2", productsSection2);
+        renderProducts("product-container-2", productsSection2);
     </script>
     <!-- Modal -->
     <div id="Modal"></div>

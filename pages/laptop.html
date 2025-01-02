@@ -6,20 +6,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>NSD Computers & Electronics</title>
-    <link rel="icon" href="#" type="image/gif" sizes="32x32">
-    <meta name="description" content="">
-    <meta name="author" content="Askaf">
+    <link rel="icon" href="../assets/img/logo.png" type="image/gif" sizes="32x32">
+    <meta name="description"
+        content="NSD Computers & Electronics: Shop custom PCs, laptops, mobiles, and accessories. Explore gadgets, electronics, and expert tech services all in one place.">
+    <meta name="author" content="NSD Computers & Electronics">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="">
+    <!-- <link rel="canonical" href="#"> -->
     <!-- OG Tags -->
-    <meta property="og:title" content="#">
+    <meta property="og:title" content="NSD Computers & Electronics - Custom PCs, Laptops, Gadgets & Services">
+    <meta property="og:description"
+        content="Explore custom PCs, laptops, mobiles, accessories, and electronics. Get the best gadgets and expert tech services in one place.">
+    <meta property="og:image" content="https://nsdcomputers.com/assets/img/hero_banner_1.png">
+    <!-- <meta property="og:url" content="https://nsdcomputers.com/"> -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="#">
-    <meta property="og:image" content="#">
-    <meta property="og:description" content="#">
+    <meta property="og:site_name" content="NSD Computers & Electronics">
     <meta property="og:locale" content="en_US">
-    <meta property="og:site_name" content="#">
-    <meta property="og:image:alt" content="#">
     <!-- Google Tag Manager -->
     <!-- End Google Tag Manager -->
     <!-- CSS -->
@@ -31,136 +32,66 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-sm bg-2 navbar-light fixed-top">
-        <div class="container-fluid d-flex justify-content-between">
-            <img src="../assets/img/logo_2.png" class="nav-logo" style="width:55px; border-radius: 5px;"
-                alt="NSD Logo">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar"
-                aria-label="Nav bar toggle button">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="collapsibleNavbar">
-                <ul class="navbar-nav text-center">
-                    <li class="nav-item px-3 font-small">
-                        <a class="nav-link" href="/desktop">Desktop</a>
-                    </li>
-                    <li class="nav-item px-3 font-small">
-                        <a class="nav-link" href="/laptop">Laptop</a>
-                    </li>
-                    <li class="nav-item px-3 font-small">
-                        <a class="nav-link" href="/mobile">Mobile</a>
-                    </li>
-                    <li class="nav-item px-3 font-small">
-                        <a class="nav-link" href="/accessories">Accessories</a>
-                    </li>
-                    <li class="nav-item px-3 font-small">
-                        <a class="nav-link" href="/home-appliances">Home Appliances</a>
-                    </li>
-                    <li class="nav-item px-3 font-small">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item px-3 font-small">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+    <!-- NavBar -->
+    <div id="NavBar"></div>
     <!-- Breadcrumb -->
-    <nav style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="bcb-sec">
-        <ol class="breadcrumb">
-            <li class="breadcrumb-item font-super-small"><a href="/">Home</a></li>
-            <li class="breadcrumb-item active font-super-small" aria-current="page">Laptop</li>
-        </ol>
+    <nav id="breadcrumb" style="--bs-breadcrumb-divider: '>';" aria-label="breadcrumb" class="breadcrumb-section">
+        <ol class="breadcrumb"></ol>
     </nav>
     <!-- Product List -->
+    <script src="../assets/js/product.js"></script>
+    <!-- Product Section 1 -->
     <div class="product-head">
-        <h2 class="font-large">Products</h2>
+        <h2 class="font-large">Laptop</h2>
     </div>
-    <div class="product">
-        <div class="card-div" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <div class="card">
-                <img src="../assets/img/s_placeholder.png" class="card-img-top" alt="..." loading="lazy">
-                <div class="card-body">
-                    <h5 class="card-title font-small">Card title</h5>
-                </div>
-            </div>
-        </div>
-        <div class="card-div" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <div class="card">
-                <img src="../assets/img/s_placeholder.png" class="card-img-top" alt="..." loading="lazy">
-                <div class="card-body">
-                    <h5 class="card-title font-small">Card title</h5>
-                </div>
-            </div>
-        </div>
-        <div class="card-div" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <div class="card">
-                <img src="../assets/img/s_placeholder.png" class="card-img-top" alt="..." loading="lazy">
-                <div class="card-body">
-                    <h5 class="card-title font-small">Card title</h5>
-                </div>
-            </div>
-        </div>
-        <div class="card-div" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            <div class="card">
-                <img src="../assets/img/s_placeholder.png" class="card-img-top" alt="..." loading="lazy">
-                <div class="card-body">
-                    <h5 class="card-title font-small">Card title</h5>
-                </div>
-            </div>
-        </div>
+    <div id="product-container-1" class="product"></div>
+    <!-- Product Section 2 -->
+    <div class="product-head" id="adapters&converters">
+        <h2 class="font-large">Laptop Components</h2>
     </div>
+    <div id="product-container-2" class="product"></div>
+    <script>
+        const productsSection1 = [
+        {  placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/popular/laptop.png", alt: "Image", title: "Laptop" },
+
+        ];
+        const productsSection2 = [
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "Panel", title: "Panel" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "Keypad", title: "Keypad" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "Screen", title: "Screen" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "Hinges", title: "Hinges" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "RAM", title: "RAM" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "Laptop Speaker", title: "Laptop Speaker" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "NVMe SSD", title: "NVMe SSD" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "SATA SSD", title: "SATA SSD" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "HDD", title: "HDD" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "WiFi Card", title: "WiFi Card" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "Battery", title: "Battery" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "Motherboard", title: "Motherboard" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "CPU Fan", title: "CPU Fan" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "Docking Station", title: "Docking Station" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "CMOS Battery (2032 2025)", title: "CMOS Battery (2032 2025)" },
+            { placeholder: "../assets/img/s_placeholder.png", image: "../assets/img/s_placeholder.png", alt: "Laptop CMOS Battery Connector Type", title: "Laptop CMOS Battery Connector Type" },
+
+
+        ];
+        // Render products in both sections
+        renderProducts("product-container-1", productsSection1);
+        renderProducts("product-container-2", productsSection2);
+    </script>
     <!-- Modal -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Please Note</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body text-justify">
-                    <!-- <p class="mb-3" style="font-size: 1.2rem; color: #555;">
-                        <i class="bi bi-globe text-info"></i>
-                        <span style="color: #333; font-weight: bold;">This website showcases products only.</span>
-                    </p> -->
-                    <p class="mb-3 font-small">
-                        <i class="bi bi-x-circle-fill text-danger"></i> 
-                        <span style="color: #ff5f5f;">Currently we cannot take orders from this website. It is only for viewing product details.</span>
-                    </p>
-                    <p class="mb-3 font-small">
-                        <i class="bi bi-check-circle-fill text-success"></i> Kindly visit our store or contact us to buy a product.
-                    </p>
-                    <div class="modal-footer">
-                        <div class="d-flex justify-content-center gap-3">
-                            <a href="tel:+91 8056863853" class="btn btn-outline-primary d-flex align-items-center gap-2">
-                                <i class="bi bi-telephone-fill"></i> Call Us
-                            </a>
-                            <a href="https://wa.me/918056863853" target="_blank" class="btn btn-success d-flex align-items-center gap-2">
-                                <i class="bi bi-whatsapp"></i> WhatsApp
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-     <!-- Footer -->
-     <footer class="bg-2">
-        <div class="footer-icon-div">
-            <span class="footer-icon-span"><a href="#" target="_blank">
-                    <i class="bi bi-facebook footer-icon"></i></a>
-            </span>
-            <span class="footer-icon-span"><a href="https://www.instagram.com/nsdcomputers" target="_blank">
-                    <i class="bi bi-instagram footer-icon"></i></a>
-            </span>
-        </div>
-        <div class="text-center p-3">
-            <a href="/" class="font-small text-decoration-none"><i class="bi bi-c-circle"></i> 2024 NSD
-                Computers & Electronics. All rights reserved.</a><br>
-            <a href="https://askaf.in/" class="font-small text-decoration-none">Design by Askaf</a>
-        </div>
-    </footer>
+    <div id="Modal"></div>
+    <!-- Link Card -->
+    <div id="LinkCard"></div>
+    <!-- Contact & Map -->
+    <div id="contact" class="sec-contact"></div>
+    <!-- Whatsapp -->
+    <div id="WhatsApp"></div>
+    <!-- Footer -->
+    <div id="Footer"></div>
+    <!-- App JS -->
+    <script src="../assets/js/app.js"></script>
+
 </body>
 
 </html>
