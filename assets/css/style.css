@@ -32,6 +32,7 @@ a {
     font-weight: 500 !important;
 }
 
+
 @media screen and (max-width: 768px) {
     .font-large {
         font-size: 5vw !important;
@@ -84,6 +85,12 @@ Bootstrap Overwrite
     margin-top: 0;
     /* Adjust if needed to align dropdown */
 }
+
+.lazy-load {
+    filter: blur(5px);
+    transition: filter 0.2s;
+  }
+  
 
 
 @media screen and (max-width: 768px) {
@@ -179,8 +186,7 @@ Category Icon
 }
 
 .category {
-/*     background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%); */
-    background-color: #f0f0f0;
+    background-color: #F5F5F5;
     border-radius: 10px;
     width: 10vw;
     height: 10vw;
@@ -189,7 +195,6 @@ Category Icon
     justify-content: center;
     align-items: center;
     overflow: hidden;
-/*     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
 }
 
 .category-img {
@@ -245,6 +250,11 @@ Category Icon
         margin-top: 3vw;
     }
 }
+/***********************************************************
+Search Bar
+***********************************************************/
+
+
 
 /***********************************************************
 Product Section
@@ -359,7 +369,7 @@ Link card
     gap: 8px;
     /* Space between icon and text */
     padding: 8px 12px;
-    background-color: #f0f0f0;
+    background-color: #F5F5F5;
     border-radius: 4px;
     text-decoration: none;
     color: #333;
@@ -521,7 +531,7 @@ Contact & Map Section
 }
 
 .contact-card {
-    background-color: #f0f0f0;
+    background-color: #F5F5F5;
     border-radius: 10px;
     padding: 2% 5%;
     width: 40%;
