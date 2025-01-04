@@ -141,7 +141,29 @@
             <h3 class="category-text font-small">Cables</h3>
         </div>
     </div>
-
+    <!-- Search Bar -->
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <form id="searchForm" class="d-flex shadow rounded">
+                    <input type="text" id="searchInput" class="form-control me-2 border-0 font-small" placeholder="Search here..."
+                        aria-label="Search" style="border-top-left-radius: .25rem; border-bottom-left-radius: .25rem;">
+                    <button type="submit" class="d-flex align-items-center justify-content-center"
+                        style="border-top-right-radius: .25rem; border-bottom-right-radius: .25rem;">
+                        <i class="bi bi-search"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.getElementById("searchForm").addEventListener("submit", function (event) {
+            event.preventDefault();
+            const query = document.getElementById("searchInput").value.toLowerCase();
+            sessionStorage.setItem("searchQuery", query);
+            window.location.href = "results.html";
+        });
+    </script>
     <!-- Product List -->
     <script src="assets/js/product.js"></script>
 
