@@ -17,33 +17,34 @@ document.getElementById('NavBar').innerHTML = `<nav class="navbar navbar-expand-
                         Devices
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="accessoriesDropdown">
-                        <li><a class="dropdown-item" href="/desktop">Desktop</a></li>
-                        <li><a class="dropdown-item" href="/laptop">Laptop</a></li>
-                        <li><a class="dropdown-item" href="/mobile">Mobile</a></li>
+                        <li><a class="dropdown-item font-small py-2" href="/desktop">Desktop</a></li>
+                        <li><a class="dropdown-item font-small py-2" href="/laptop">Laptop</a></li>
+                        <li><a class="dropdown-item font-small py-2" href="/mobile">Mobile</a></li>
                     </ul>
                 </li>
-                <li class="nav-item px-3 font-small">
-                    <a class="nav-link" href="/laptop">Laptop</a>
+               <li class="nav-item px-3 font-small">
+                    <a class="nav-link" href="/gadgets">Gadgets</a>
                 </li>
                 <li class="nav-item px-3 font-small">
-                    <a class="nav-link" href="/mobile">Mobile</a>
-                </li>
-                <li class="nav-item dropdown px-3 font-small">
-                    <a class="nav-link dropdown-toggle" href="#" id="accessoriesDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        Accessories
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="accessoriesDropdown">
-                        <li><a class="dropdown-item" href="/accessories/keyboards">Keyboards</a></li>
-                        <li><a class="dropdown-item" href="/accessories/mice">Mice</a></li>
-                        <li><a class="dropdown-item" href="/accessories/headphones">Headphones</a></li>
-                    </ul>
+                    <a class="nav-link" href="/accessories">Accessories</a>
                 </li>
                 <li class="nav-item px-3 font-small">
                     <a class="nav-link" href="/home-appliances">Home Appliances</a>
                 </li>
+                <li class="nav-item dropdown px-3 font-small">
+                    <a class="nav-link dropdown-toggle" href="/popular-products" id="accessoriesDropdown" role="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Others
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="accessoriesDropdown">
+                        <li><a class="dropdown-item font-small py-2" href="/cables">Cables</a></li>
+                        <li><a class="dropdown-item font-small py-2" href="/tools">Tools</a></li>
+                        <li><a class="dropdown-item font-small py-2" href="/network-devices">Network Devices</a></li>
+                    <li><a class="dropdown-item font-small py-2" href="/security-devices">Security Devices</a></li>
+                        </ul>
+                </li>
                 <li class="nav-item px-3 font-small">
-                    <a class="nav-link" href="#services">Services</a>
+                    <a class="nav-link" href="/#services">Services</a>
                 </li>
                 <li class="nav-item px-3 font-small">
                     <a class="nav-link" href="#contact">Contact</a>
@@ -92,33 +93,32 @@ function initializeBreadcrumb() {
     });
 }
 
+// Link card
+document.getElementById('LinkCard').innerHTML = `
+    <div class="links-container">
+        <a href="/desktop">Desktop <i class="bi bi-box-arrow-up-right"></i></a>
+        <a href="/laptop">Laptop <i class="bi bi-box-arrow-up-right"></i></a>
+        <a href="/mobile">Mobile <i class="bi bi-box-arrow-up-right"></i></a>
+        <a href="/home-appliances">Home Appliances <i class="bi bi-box-arrow-up-right"></i></a>
+        <a href="/accessories">Accessories <i class="bi bi-box-arrow-up-right"></i></a>
+        <a href="/gadgets">Gadgets <i class="bi bi-box-arrow-up-right"></i></a>
+        <a href="/desktop">Desktop Components <i class="bi bi-box-arrow-up-right"></i></a>
+        <a href="/laptop">Laptop Components <i class="bi bi-box-arrow-up-right"></i></a>
+        <a href="/printer">Printers <i class="bi bi-box-arrow-up-right"></i></a>
+        <a href="/cables">Cables <i class="bi bi-box-arrow-up-right"></i></a>
+        <a href="/tools">Tools <i class="bi bi-box-arrow-up-right"></i></a>
+        <a href="/network-devices">Network Devices <i class="bi bi-box-arrow-up-right"></i></a>
+        <a href="/security-devices">Security Devices<i class="bi bi-box-arrow-up-right"></i></a>
+        <a href="/network-devices/#converters">Converters <i class="bi bi-box-arrow-up-right"></i></a>
+        <a href="/security-devices/#batteries">Batteries <i class="bi bi-box-arrow-up-right"></i></a>
+        <a href="/tools/#connecter&ports">Connecter <i class="bi bi-box-arrow-up-right"></i></a>
+        <a href="/tools/#connecter&ports">Ports <i class="bi bi-box-arrow-up-right"></i></a>
+      </div>
+`;
+
 // Call the function to initialize the breadcrumb after the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", initializeBreadcrumb);
 
-
- // Lazy load script
- document.addEventListener("DOMContentLoaded", function () {
-    const lazyImages = document.querySelectorAll(".lazy-load");
-
-    const lazyLoad = (entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const img = entry.target;
-                img.src = img.dataset.src; // Swap placeholder with actual image
-                img.classList.remove("lazy-load"); // Optional: remove lazy class
-                observer.unobserve(img); // Stop observing the image
-            }
-        });
-    };
-
-    const observer = new IntersectionObserver(lazyLoad, {
-        root: null, // Use viewport as root
-        rootMargin: "0px",
-        threshold: 0.05 // Load when 10% of the image is visible
-    });
-
-    lazyImages.forEach(img => observer.observe(img));
-});
 
 // contact.js
 
@@ -190,7 +190,7 @@ document.getElementById('WhatsApp').innerHTML = `
 document.getElementById('Footer').innerHTML = `
 <footer class="custom-background">
         <div class="footer-icon-div">
-            <span class="footer-icon-span"><a href="#" target="_blank">
+            <span class="footer-icon-span"><a href="https://www.facebook.com/profile.php?id=61571055716820&mibextid=ZbWKwL" target="_blank">
                     <i class="bi bi-facebook footer-icon"></i></a>
             </span>
             <span class="footer-icon-span"><a href="https://www.instagram.com/nsdcomputers" target="_blank">
@@ -215,3 +215,5 @@ document.getElementById('Footer').innerHTML = `
 
 </footer>
 `;
+
+console.log('app.js loaded');
