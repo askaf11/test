@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Book a Meeting with Me</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f9fafb;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+    }
+    h2 {
+      color: #333;
+    }
+    .calendar-container, .slots-container, .form-container {
+      background: white;
+      padding: 20px;
+      margin-top: 20px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 8px;
+    }
+    input[type="date"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+    .slots {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 15px;
+    }
+    .slot-btn {
+      flex: 1 1 40%;
+      background-color: #2563eb;
+      color: white;
+      border: none;
+      padding: 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      text-align: center;
+      font-size: 14px;
+    }
+    .slot-btn.selected {
+      background-color: #1e40af;
+    }
+    form input {
+      width: 100%;
+      padding: 10px;
+      margin-top: 10px;
+      font-size: 16px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    button[type="submit"] {
+      width: 100%;
+      margin-top: 15px;
+      background-color: #16a34a;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 6px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button[type="submit"]:hover {
+      background-color: #15803d;
+    }
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+<h2>Book a Meeting with Me</h2>
+
+<div class="calendar-container">
+  <label>Select a Date:</label><br>
+  <input type="date" id="date-picker" min="">
+</div>
+
+<div class="slots-container hidden" id="slots-container">
+  <label>Select a Time:</label>
+  <div class="slots" id="slots"></div>
+</div>
+
+<div class="form-container hidden" id="form-container">
+  <form id="appointment-form">
+    <input type="text" id="name" name="Name" placeholder="Your Name" required>
+    <input type="email" id="email" name="Email" placeholder="Your Email" required>
+    <button type="submit">Confirm Booking</button>
+  </form>
+</div>
+
+<script>
+// -- CONFIGS --
+const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw-5NvpEnbwqXzkJwjBlW3s8UENjN0eRjLThbN91q3nyqcGiTyTRjUKy1PoOQK8uOI/exec';
+const SLOT_DURATION = 45; // minutes
+const WORKING_HOURS_START = 18; // 10 AM
+const WORKING_HOURS_END = 22;   // 5 PM
+const WORKING_DAYS = [1, 2, 3, 4, 5, 6, 7]; // Monday to Friday
+
+let selectedDate = null;
+let selectedSlot = null;
+
+// Set minimum date as today
+const today = new Date().toISOString().split('T')[0];
+document.getElementById('date-picker').setAttribute('min', today);
+
+// Listen for date selection
+document.getElementById('date-picker').addEventListener('change', function() {
+  selectedDate = this.value;
+  showAvailableSlots(selectedDate);
+});
+
+function showAvailableSlots(date) {
+  const slotsContainer = document.getElementById('slots');
+  slotsContainer.innerHTML = '';
+
+  const selectedDay = new Date(date).getDay();
+  if (!WORKING_DAYS.includes(selectedDay)) {
+    slotsContainer.innerHTML = '<p>No slots available for weekends.</p>';
+    document.getElementById('slots-container').classList.remove('hidden');
+    document.getElementById('form-container').classList.add('hidden');
+    return;
+  }
+
+  for (let hour = WORKING_HOURS_START; hour < WORKING_HOURS_END; hour++) {
+    for (let min = 0; min < 60; min += SLOT_DURATION) {
+      const time = new Date(date);
+      time.setHours(hour, min, 0, 0);
+      const isoTime = time.toISOString().slice(0,16);
+
+      const btn = document.createElement('button');
+      btn.className = 'slot-btn';
+      btn.innerText = formatAMPM(time);
+      btn.dataset.slot = isoTime;
+
+      btn.onclick = function() {
+        selectedSlot = this.dataset.slot;
+        document.querySelectorAll('.slot-btn').forEach(b => b.classList.remove('selected'));
+        this.classList.add('selected');
+        document.getElementById('form-container').classList.remove('hidden');
+      };
+
+      slotsContainer.appendChild(btn);
+    }
+  }
+  document.getElementById('slots-container').classList.remove('hidden');
+}
+
+function formatAMPM(date) {
+  let hours = date.getHours();
+  let minutes = date.getMinutes();
+  const ampm = hours >= 12 ? 'PM' : 'AM';
+  hours = hours % 12;
+  hours = hours ? hours : 12; // hour '0' should be '12'
+  minutes = minutes < 10 ? '0'+minutes : minutes;
+  return hours + ':' + minutes + ' ' + ampm;
+}
+
+// Form Submit
+document.getElementById('appointment-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+
+  if (!selectedSlot) {
+    alert("Please select a time slot.");
+    return;
+  }
+
+  const payload = {
+    Name: name,
+    Email: email,
+    AppointmentSlot: selectedSlot
+  };
+
+  try {
+    await fetch(APPS_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(payload)
+    });
+
+    alert("✅ Appointment booked! Please check your email confirmation.");
+    window.location.reload();
+  } catch (error) {
+    console.error(error);
+    alert("❌ Failed to book appointment. Try again later.");
+  }
+});
+</script>
+
+</body>
+</html>
